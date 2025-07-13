@@ -31,5 +31,7 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Test
       run: mvn test
+    -name: Show event trigger
+     run: echo "Triggered by ${{ github.event_name }}"
     
 
