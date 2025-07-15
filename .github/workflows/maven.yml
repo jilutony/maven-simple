@@ -13,6 +13,8 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
+env:
+  DAY_OF_WEEK: Monday
 
 jobs:
   build:
@@ -42,6 +44,8 @@ jobs:
   upload: 
     needs: build
     runs-on: ubuntu-latest
+    env:
+      Greeting: Hello
     if: github.ref == 'refs/heads/master'
     
     steps:
@@ -50,6 +54,6 @@ jobs:
       with:
         name: maven-simple-jar
     - name: List files
-      run: echo "Nice work, $First_Name. Deploying to production server on branch $GITHUB_REF"
+      run: echo " $Greeting , Nice work, $First_Name. Today is $DAY_OF_WEEK Deploying to production server on branch $GITHUB_REF"
       env:
           First_Name: Mona
