@@ -50,4 +50,4 @@ jobs:
       with:
         name: maven-simple-jar
     - name: List files
-      run: ls -R
+      run: echo "Deploying to production server on branch $GITHUB_REF"
