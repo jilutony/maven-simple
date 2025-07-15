@@ -50,4 +50,6 @@ jobs:
       with:
         name: maven-simple-jar
     - name: List files
-      run: echo "Deploying to production server on branch $GITHUB_REF"
+      run: echo "Nice work, $First_Name. Deploying to production server on branch $GITHUB_REF"
+      env:
+          First_Name: Mona
