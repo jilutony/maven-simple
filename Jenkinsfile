@@ -20,7 +20,17 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh 'mvn test'
+                script {
+                    try {
+                        sh 'mvn test'
+                        currentBuild.description = "Tests Passed"
+                        echo "✅ All tests passed successfully."
+                    } catch (Exception err) {
+                        currentBuild.description = "Tests Failed"
+                        echo "❌ Some tests failed. Check the logs for details."
+                        throw err // Rethrow to fail the build
+                    }
+                }
             }
         }
     }
