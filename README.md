@@ -1,6 +1,6 @@
 # example
 
-Example Maven project generated using `maven-archetype-quickstart`
+Example Maven project generated using `maven-archetype-quickstart` -- test
 
 [https://jitpack.io/#jitpack/maven-simple](https://jitpack.io/#jitpack/maven-simple)
 
