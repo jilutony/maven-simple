@@ -6,7 +6,7 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
+        stage('Checkout1') {
             steps {
                 git url: "${REPO_URL}", branch: 'master'
             }
