@@ -6,12 +6,6 @@ pipeline {
     }
 
     stages {
-        stage('Checkout123') {
-            steps {
-                git url: "${REPO_URL}", branch: 'master'
-            }
-        }
-
         stage('Build') {
             steps {
                 sh 'mvn -B package --file pom.xml'
