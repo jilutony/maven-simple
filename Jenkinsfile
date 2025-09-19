@@ -24,7 +24,7 @@ pipeline {
                     try {
                         sh 'mvn test'
                         currentBuild.description = "Tests Passed"
-                        echo "✅ All tests passed successfully."
+                        echo "✅ All tests passed successfully, congradulations"
                     } catch (Exception err) {
                         currentBuild.description = "Tests Failed"
                         echo "❌ Some tests failed. Check the logs for details."
