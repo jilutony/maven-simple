@@ -1,4 +1,4 @@
-pipeline {
+hpipeline {
     agent any
 
     environment {
@@ -15,6 +15,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'mvn test'
+                echo "scan has been only applied to new branch"
             }
         }
     }
